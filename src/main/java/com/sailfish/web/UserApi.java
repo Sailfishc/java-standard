@@ -26,6 +26,7 @@ public class UserApi {
     public UserOutputDTO addUser(UserInputDTO userInputDTO) {
         User user = userInputDTO.convertToUser();
         User convertUser = userService.addUser(user);
+
         UserOutputDTO userOutputDTO = convertUser.convertToUserOutputDTO();
         return userOutputDTO;
     }
